@@ -1,1 +1,1 @@
-This Repo contains answers to coading problems on LeetCode.com
+This Repo contains answers to coding problems on LeetCode.com
