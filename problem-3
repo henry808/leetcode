@@ -1,0 +1,15 @@
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        # Brute force with one optimization O(n^2) version
+        # Todo: O(n) solution. See my earlier solution in leetcode.
+        result = 0
+        for str_ind in range(len(s)):
+            chars = set([])
+            if len(s) - str_ind < result:
+                break
+            for sub_ind in range(str_ind, len(s)):
+                chars.add(s[sub_ind])
+                if len(chars) < sub_ind -  str_ind + 1:
+                    break
+            result = max(result, len(chars))
+        return result
